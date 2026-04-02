@@ -524,7 +524,6 @@ ORDER BY 1;
 ---
 
 ## 🚩 Final Conclusion
----
 In conclusion, this project used Google BigQuery and advanced SQL to analyze the full business cycle of a bicycle manufacturer, from purchasing and inventory to sales and customer retention. 
 
 Overall, the analysis showed that bikes sell very well, but keeping too many parts (like frames) in stock wastes company money. We also found that customers usually return to buy again after 3 months, and $3.8M in delayed orders is creating a supply risk. These insights may help the company cut inventory costs, fix supply problems, and plan better marketing.
