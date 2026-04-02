@@ -193,8 +193,6 @@ Below are the exact tables and fields utilized in the SQL queries for this analy
   | Socks | 2,724 | 523 | 4.21 |
   | Road Frames | 5,564 | 1,137 | 3.89 |
   
-  **💡 Business Insights:**
-  * **The Rise of  SubCategory:** `Mountain Frames` (521% growth) and `Road Frames` (389% growth) are seeing massive spikes.
 </details>
 
 <details>
@@ -254,11 +252,6 @@ Below are the exact tables and fields utilized in the SQL queries for this analy
   | 2014 | 6 | 9,711 | 2 |
   | 2014 | 1 | 8,823 | 3 |
 
-  **💡 Business Insights:**
-  * **Highly Stable Market Leaders:** The sales distribution is extremely static. From 2011 to 2014, Territory 4, 6, and 1 have maintained the exact same 1st, 2nd, and 3rd positions without any fluctuation. This indicates very stable market demand and customer loyalty in these specific regions.
-  * **The Drop in 2014:** Order quantities peaked in 2013 across all regions but show a significant drop in 2014. 
-  * **Actionable Recommendation:** The supply chain team must prioritize inventory routing to Territories 4, 6, and 1 to prevent stockouts in these regions. Meanwhile, sales leadership needs to investigate why other territories consistently fail to break into the top 3 and adjust regional sales strategies accordingly.
-
 </details>
 
 <details>
@@ -294,11 +287,6 @@ ORDER BY 1;
   | :--- | :--- | :--- |
   | 2012 | Helmets | $149.72 |
   | 2013 | Helmets | $543.22 |
-
-  **💡 Business Insights:**
-  * **Lack of Promotional Investment:** `Helmets` is the only subcategory receiving seasonal discounts.
-  * **Explaining Poor Cross-Selling:** This explains the low helmet sales discovered in Query 01. The company is not spending enough marketing budget to promote accessories.
-  * **Actionable Recommendation:** To fix this, the marketing team should increase the promotional budget for accessories.
 
 </details>
 
@@ -425,9 +413,6 @@ ORDER BY 1;
 
   *(Note: Showing partial results to highlight cyclical patterns)*
 
-  **💡 Business Insights:**
-  * **Batch Production Strategy:** This data confirms that AdventureWorks utilizes a periodic "Batch Production" model rather than a Just-In-Time (JIT) approach. They manufacture large runs of components at the start of specific quarters and consume them over the next few months.
-
 </details>
 
 <details>
@@ -492,11 +477,6 @@ ORDER BY 1;
 
   *(Note: Showing partial results to highlight the contrast between high and low ratios)*
 
-  **💡 Business Insights:**
-  * **Overstocking of Specific Frames:** Certain frame models (like the `HL Mountain Frame - Black, 48`) have a dangerously high ratio of 27.0. This means the factory produced 27 units just to sell 1. This ties up significant warehouse space.
-  * **Highly Efficient Finished Goods:** Conversely, fully assembled bicycles (like the `Road-650 Black` and `Mountain-100`) have very healthy ratios (between 1.1 and 1.5). They are selling almost as fast as they are being produced.
-  * **Actionable Recommendation:** Reduce production batches that have a high stock/sales ratio, and redirect factory capacity toward fast-selling assembled bicycles to maximize revenue and capital efficiency.
-
 </details>
 
 <details>
@@ -526,12 +506,21 @@ ORDER BY 1;
   | :--- | :--- | :--- | :--- |
   | 2014 | 1 (Pending) | 224 | $3,873,579.01 |
 
-  **💡 Business Insights:**
-  * **High Pending Value:** There are 224 pending purchase orders in 2014, representing a massive value of nearly **$3.87 million**.
-  * **Supply Chain Risk:** This large backlog means millions of dollars worth of inventory or raw materials have not yet arrived. This delay could stall factory production and cause stockouts for fast-selling items.
-
 </details>
 
+  **💡 Business Insights:**
+1. **The Inventory: Overstocking Parts vs. Selling Bikes (Queries 02, 06, 07)**
+* While finished bikes (like Road-650) have a highly efficient Stock-to-Sales ratio (1.1), Mountain Frames(individual parts) are severely overstocked (Ratio of 27.0). Furthermore, the company uses large "Batch Production" (Query 06), creating huge inventory swings.
+* **The Meaning:** The factory is waste massive amounts of money and warehouse space producing spare parts that don't sell fast enough, instead of focusing on the finished bicycles that actually drive revenue.
+* **Action:** Shift production strategy. Reduce batch sizes for frames and components, and reallocate factory capacity to assemble more ready-to-ride bikes.
+2. **The Supply Chain Bottleneck (Queries 03, 08)**
+* Sales peaked in 2013 but dropped significantly in 2014 across all top regions (Query 03). At the same time, there is a massive $3.87 million backlog in "Pending" purchase orders in 2014 (Query 08).
+* **The Meaning:** The sales drop in 2014 might not be a marketing failure, but a supply chain crisis. The company cannot sell bikes if millions of dollars worth of raw materials or inventory are stuck in transit.
+* **Action:** The Supply Chain team must urgently resolve vendor delays for the pending orders to prevent out-of-stock situations in our top-performing regions.
+3. **Missed Cross-Selling Opportunities (Queries 01, 04)**
+  *  **The Insight:** Accessories (Caps, Helmets, Socks) generate high order volumes but low revenue (Query 01). However, the company only spends its promotional budget on discounting Helmets (Query 04), ignoring other accessories entirely.
+  *  **The Meaning:** Customers are buying expensive Road Bikes ($1M+ revenue), but we aren't effectively incentivizing them to add high-margin accessories to their carts.
+  *  **Action:** Expand seasonal discount campaigns to include Socks, Jerseys, and Caps. Bundle these accessories with high-end bike purchases to increase the Average Order Value.
 ---
 
 ## 🚩 Final Conclusion
